@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Registaration</title>
+        <style>
+         /*  Smart phone      */
+          
+         @media screen and (min-width:450px) {
+
+body {
+     background-color: rgb(172, 170, 90);
+    
+}
+}
+/*  Tablet,ipad      */    
+
+@media Screen and (min-width:768px) and (max-width:1024px){
+body {
+     background-color: rgb(177, 48, 48);
+     
+}
+}
+
+/* Desktops and Laptops asfsdf     */    
+
+@media Screen and (min-width:1224px) {
+body {
+     background-color: rgb(48, 151, 8);
+     
+}
+}
+
+/* Large Screens---------  */
+@media Screen and (min-width:1824px) {
+body {
+    
+      background-color: rgb(26, 194, 135);
+      }
+}
+
+.container{ 
+        background-color: rgb(196, 143, 177);
+        width: 190px;
+        padding: 40px 30px;
+  }
+  body, html {
+height: 100%;
+}
+
+body {
+/* The image used */
+background-image: url("tree.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+        </style>
+      </head>
+    <body>
+      <center>
+        
+      <h1>Registration Form</h1>
+      <div class="container">
+      <form action="LoginSuccess.html" registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+    
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+    
+        <input type="submit" value="Register">
+      </form>
+    
+      <script>
+        function validateForm() {
+          const username = document.getElementById('username').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirmPassword').value;
+    
+          // Check if passwords match
+          if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return false;
+          }
+    
+          // Validate other fields (you can add more validation as needed)
+          if (username.length < 4 || username.length > 20) {
+            alert("Username must be between 4 and 20 characters");
+            return false;
+          }
+    
+          if (!validateEmail(email)) {
+            alert("Invalid email format");
+            return false;
+          }
+    
+          return true;
+        }
+    
+        function validateEmail(email) {
+          // A simple email validation regular expression
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailPattern.test(email);
+        }
+      </script>
+      </center>
+    </div>
+    </body>
+    </html>

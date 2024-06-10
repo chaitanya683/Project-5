@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <style>
+          /*  Smart phone  */
+                  
+          body{
+                 background-color: rgb(85, 129, 160);
+                 width: 190px;
+                 padding: 40px 30px;
+               }
+               @media screen and  (min-width:450px){
+
+               body {
+                background-color: rgb(115, 9, 181);
+                
+                width: 190px;
+               }
+
+               }
+                    /*  Tablet,ipad      */    
+                  
+                    body{
+                 background-color: rgb(145, 130, 111);
+                 
+                 width: 190px;
+               }
+               @media screen and  (min-width:550px){
+
+               body {
+                background-color: rgb(58, 46, 66);
+                
+                width: 190px;
+               }
+
+               }
+               
+                  /* Desktops and Laptops asfsdf     */    
+                  
+                  body{
+                 background-color: rgb(168, 77, 77);
+                 
+                 width: 190px;
+               }
+               @media screen and  (min-width:560px){
+
+               body {
+                background-color: rgb(49, 109, 159);
+                
+                width: 190px;
+               }
+
+               }
+
+                    /* Large Screens---------  */
+                    body{
+                 background-color: rgb(106, 205, 93);
+                 width: 190px;
+               }
+               @media screen and  (min-width:650px){
+
+               body {
+                  .container{ 
+                  background-color: rgb(102, 226, 205);
+                  width: 190px;
+                  padding: 40px 30px;
+                }   
+            
+               }
+
+               }
+        .container{ 
+        background-color: rgb(233, 89, 149);
+        width: 190px;
+        padding: 40px 30px;
+  }
+  body {
+/* The image used */
+background-image: url("sai.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  }
+  </style>
+   <title>LoginPage</title>
+      <script>
+        function loginValidation() {
+        
+            var uname = document.myform.username.value;
+                       
+            var password = document.myform.password.value;
+                      if(uname==null || uname=="") {
+                        alert("Name cant be blank")
+                        return false;  
+                     } else if (password.length<6){
+                        alert("Password Must be 6 letters")
+                        return false;
+                     }  
+                     return true                 
+                  }           
+               </script>
+               </head>
+               <body>
+                  <video id="background-video" autoplay loop muted poster="mixkit-explosion-of-colored-powders-in-a-mirrored-shot-51814-full-hd.mp4">
+                     <source src="mixkit-explosion-of-colored-powders-in-a-mirrored-shot-51814-full-hd.mp4" type="video/mp4">
+                   </video>
+                   
+         <form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+          <center><div class="container">
+            <h2>Login Page</h2>
+         User Name : <input type="text" name="username" autofocus> <br>
+         Password :  <input type="password" name="password"> <br>
+                  <input type="submit" value="Submit">     
+                  </div> 
+               </center>
+                 </form>
+                
+            </body>
+</html>
